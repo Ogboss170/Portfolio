@@ -15,7 +15,7 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters long."),
 });
 
-type ContactFormValues = z.infer<typeof contactSchema>;
+type ContactFormValues = z.infer<type contactSchema>;
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -30,11 +30,56 @@ export function Contact() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    // Simulate API delay
+    // Simulate API submission delay
     await new Promise((resolve) => setTimeout(resolve, 1000));
     setSubmitted(true);
     confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } });
     reset();
+  };
+
+  const handleDownloadResume = () => {
+    // Dynamically generate and trigger PDF/text summary download of Oghosa's Resume
+    const resumeText = `
+===================================================================
+                  OGHOSA (OGBOSS) - ENGINEERING CV
+===================================================================
+Title: Full-Stack Web, Mobile & Backend Engineer | Founder @ Workspace
+Location: Benin, Nigeria (Open for Remote Opportunities)
+Email: ogboss170@gmail.com
+WhatsApp: +234 9050045836
+GitHub: https://github.com/ogboss170
+LinkedIn: https://linkedin.com/in/osadolor-oghosa
+
+SUMMARY
+-------------------------------------------------------------------
+21-year-old Software Engineer and Founder of Workspace. Specializing in
+cross-platform mobile apps (React Native / Expo), enterprise web (Next.js),
+and scalable microservice backends (NestJS, Prisma ORM, PostgreSQL).
+
+FLAGSHIP PRODUCT: WORKSPACE ECOSYSTEM
+-------------------------------------------------------------------
+An all-in-one marketplace platform unifying freelance gigs, nearby services,
+ride-hailing, interactive learning, automated financial escrow, and real-time chat.
+
+CORE SKILLS
+-------------------------------------------------------------------
+• Mobile: React Native, Expo, TypeScript, FlashList, Reanimated
+• Web: Next.js 15, React, Tailwind CSS, Framer Motion, TypeScript
+• Backend: NestJS, Prisma ORM, PostgreSQL, REST, WebSockets, Microservices
+• Cloud & Services: Firebase Auth, Firestore, Cloud SQL, FCM Push
+• Integrations: Paystack API, Stripe, Google Maps Platform, Smile ID KYC
+===================================================================
+    `.trim();
+
+    const blob = new Blob([resumeText], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "Oghosa_Ogboss_Software_Engineer_Resume.txt";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -114,16 +159,14 @@ export function Contact() {
                 <FileText className="w-6 h-6 text-blue-400" />
                 <div>
                   <h4 className="font-bold text-white text-base">Oghosa CV / Engineering Résumé</h4>
-                  <p className="text-xs text-zinc-400">Updated 2026 • Mobile & Backend Architecture</p>
+                  <p className="text-xs text-zinc-400">Updated 2026 • Full-Stack Web, Mobile & Backend</p>
                 </div>
               </div>
               <button
-                onClick={() => {
-                  alert("Downloading Oghosa (Ogboss) Official Software Engineering Resume...");
-                }}
-                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all"
+                onClick={handleDownloadResume}
+                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-blue-600/20 transition-all active:scale-95"
               >
-                <Download className="w-4 h-4" /> Download Official Résumé (PDF)
+                <Download className="w-4 h-4" /> Download Official Résumé
               </button>
             </div>
           </div>
@@ -146,7 +189,7 @@ export function Contact() {
                   </p>
                   <button
                     onClick={() => setSubmitted(false)}
-                    className="mt-4 px-4 py-2 rounded-xl bg-[#121318] text-xs font-mono text-zinc-300 border border-white/10"
+                    className="mt-4 px-4 py-2 rounded-xl bg-[#121318] text-xs font-mono text-zinc-300 border border-white/10 hover:border-white/30 transition-colors"
                   >
                     Send Another Message
                   </button>
@@ -175,7 +218,7 @@ export function Contact() {
                         className="w-full px-4 py-3 rounded-xl bg-[#121318] border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                       />
                       {errors.email && (
-                        <p className="text-[11px] text-red-400">{errors.email.message}</p>
+                        <p className="text-[11px] text-red-400">{errors.message?.message || errors.email.message}</p>
                       )}
                     </div>
                   </div>
