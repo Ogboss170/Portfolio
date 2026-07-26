@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Star, GitFork, ExternalLink, Code2, Terminal } from "lucide-react";
+import { Code2, Star, GitFork, ExternalLink, Terminal } from "lucide-react";
 
 const repositories = [
   {
@@ -40,7 +40,7 @@ export function GithubShowcase() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 border border-white/10 text-xs font-mono text-zinc-300">
-            <Github className="w-3.5 h-3.5" /> Open Source & Activity
+            <Code2 className="w-3.5 h-3.5 text-blue-400" /> Open Source & Activity
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
             GitHub Contributions

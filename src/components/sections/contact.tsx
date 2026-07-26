@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { motion } from "framer-motion";
-import { Mail, Send, CheckCircle2, Github, Linkedin, MessageSquare, FileText, Download } from "lucide-react";
+import { Mail, Send, CheckCircle2, Code2, Share2, MessageSquare, FileText, Download } from "lucide-react";
 import confetti from "canvas-confetti";
 
 const contactSchema = z.object({
@@ -64,7 +64,7 @@ export function Contact() {
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
               >
                 <div className="flex items-center gap-3">
-                  <Github className="w-5 h-5 text-zinc-400 group-hover:text-white" />
+                  <Code2 className="w-5 h-5 text-zinc-400 group-hover:text-white" />
                   <span>GitHub Profile</span>
                 </div>
                 <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">@ogboss →</span>
@@ -77,7 +77,7 @@ export function Contact() {
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
               >
                 <div className="flex items-center gap-3">
-                  <Linkedin className="w-5 h-5 text-blue-400" />
+                  <Share2 className="w-5 h-5 text-blue-400" />
                   <span>LinkedIn Network</span>
                 </div>
                 <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">Connect →</span>
