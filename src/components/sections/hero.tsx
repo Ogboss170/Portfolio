@@ -24,7 +24,7 @@ export function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
           </span>
-          <span className="font-mono text-zinc-400">Available for Senior Roles & Consulting</span>
+          <span className="font-mono text-zinc-400">Open for Freelance & Full-time (Remote)</span>
           <span className="text-zinc-600">|</span>
           <span className="text-blue-400 font-medium flex items-center gap-1">
             Founder @ Workspace <Sparkles className="w-3 h-3 text-amber-400" />

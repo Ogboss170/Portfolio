@@ -58,7 +58,7 @@ export function Contact() {
             {/* Social Buttons List */}
             <div className="space-y-3">
               <a
-                href="https://github.com"
+                href="https://github.com/ogboss170"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
@@ -67,11 +67,11 @@ export function Contact() {
                   <Code2 className="w-5 h-5 text-zinc-400 group-hover:text-white" />
                   <span>GitHub Profile</span>
                 </div>
-                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">@ogboss →</span>
+                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">@ogboss170 →</span>
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/osadolor-oghosa"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
@@ -80,22 +80,22 @@ export function Contact() {
                   <Share2 className="w-5 h-5 text-blue-400" />
                   <span>LinkedIn Network</span>
                 </div>
-                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">Connect →</span>
+                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">Osadolor Oghosa →</span>
               </a>
 
               <a
-                href="mailto:ogboss.engineering@gmail.com"
+                href="mailto:ogboss170@gmail.com"
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
               >
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-amber-400" />
                   <span>Direct Email</span>
                 </div>
-                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">ogboss.eng@gmail.com →</span>
+                <span className="text-xs font-mono text-zinc-500 group-hover:text-blue-400">ogboss170@gmail.com →</span>
               </a>
 
               <a
-                href="https://wa.me/2340000000000"
+                href="https://wa.me/2349050045836"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-between p-4 rounded-xl bg-[#121318] border border-white/10 hover:border-white/20 transition-all text-white font-medium text-sm group"
@@ -104,7 +104,7 @@ export function Contact() {
                   <MessageSquare className="w-5 h-5 text-emerald-400" />
                   <span>WhatsApp Instant</span>
                 </div>
-                <span className="text-xs font-mono text-zinc-500 group-hover:text-emerald-400">+234 (Nigeria) →</span>
+                <span className="text-xs font-mono text-zinc-500 group-hover:text-emerald-400">+234 9050045836 →</span>
               </a>
             </div>
 
