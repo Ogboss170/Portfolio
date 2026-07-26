@@ -158,7 +158,7 @@ export function Contact() {
                       <label className="text-xs font-mono text-zinc-300">Your Name</label>
                       <input
                         {...register("name")}
-                        placeholder="e.g. Alex Rivera"
+                        placeholder="Your full name"
                         className="w-full px-4 py-3 rounded-xl bg-[#121318] border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                       />
                       {errors.name && (
@@ -171,7 +171,7 @@ export function Contact() {
                       <input
                         {...register("email")}
                         type="email"
-                        placeholder="alex@company.com"
+                        placeholder="your.email@example.com"
                         className="w-full px-4 py-3 rounded-xl bg-[#121318] border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                       />
                       {errors.email && (
@@ -184,7 +184,7 @@ export function Contact() {
                     <label className="text-xs font-mono text-zinc-300">Subject</label>
                     <input
                       {...register("subject")}
-                      placeholder="Senior Mobile Engineer Role / Consulting inquiry"
+                      placeholder="Project details or engineering role opportunity"
                       className="w-full px-4 py-3 rounded-xl bg-[#121318] border border-white/10 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                     />
                     {errors.subject && (
