@@ -15,7 +15,7 @@ const contactSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters long."),
 });
 
-type ContactFormValues = z.infer<type contactSchema>;
+type ContactFormValues = z.infer<typeof contactSchema>;
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false);
