@@ -52,7 +52,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 text-lg sm:text-xl text-zinc-400 dark:text-zinc-400 light:text-zinc-600 max-w-3xl mx-auto leading-relaxed font-normal"
         >
-          I&apos;m <span className="text-white font-medium">Ogboss</span>, a 21-year-old Mobile & Backend Engineer from Nigeria specializing in <span className="text-blue-400 font-mono">React Native</span>, <span className="text-indigo-400 font-mono">NestJS</span>, <span className="text-cyan-400 font-mono">PostgreSQL</span>, <span className="text-amber-400 font-mono">Firebase</span>, and scalable marketplace platforms.
+          I&apos;m <span className="text-white font-medium">Ogboss</span>, a 21-year-old Full-Stack Web, Mobile & Backend Engineer from Nigeria specializing in <span className="text-blue-400 font-mono">Next.js / React</span>, <span className="text-indigo-400 font-mono">React Native</span>, <span className="text-cyan-400 font-mono">NestJS</span>, <span className="text-emerald-400 font-mono">PostgreSQL</span>, and scalable platforms.
         </motion.p>
 
         {/* Call to Action Buttons */}

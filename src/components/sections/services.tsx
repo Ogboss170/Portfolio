@@ -11,6 +11,12 @@ const services = [
     deliverables: ["Expo App Prebuild", "TypeScript Architecture", "App Store & Play Store Submissions"],
   },
   {
+    icon: Layers,
+    title: "Website & Web Application Development",
+    description: "Designing and engineering responsive, high-performance web applications and marketing sites using Next.js, React, TypeScript, and Tailwind CSS.",
+    deliverables: ["Next.js 15 App Router", "Lighthouse 95+ Score", "SEO & OpenGraph Optimized"],
+  },
+  {
     icon: Server,
     title: "Backend API & Microservices",
     description: "Designing RESTful and WebSocket microservices with NestJS, Prisma ORM, and PostgreSQL designed for horizontal scaling and low latency.",
