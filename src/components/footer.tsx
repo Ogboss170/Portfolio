@@ -21,6 +21,7 @@ export function Footer() {
             <a href="#architecture" className="hover:text-zinc-300">Architecture</a>
             <a href="#philosophy" className="hover:text-zinc-300">Philosophy</a>
             <a href="#contact" className="hover:text-zinc-300">Contact</a>
+            <a href="/privacy" className="text-blue-400 hover:text-blue-300 font-semibold">Privacy Policy</a>
           </div>
 
           {/* Right Copyright & Location */}
