@@ -30,11 +30,23 @@ export function Contact() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    // Simulate API submission delay
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setSubmitted(true);
-    confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } });
-    reset();
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message.");
+      }
+
+      setSubmitted(true);
+      confetti({ particleCount: 80, spread: 60, origin: { y: 0.8 } });
+      reset();
+    } catch (error) {
+      alert("Message sending failed. Please try emailing directly to ogboss170@gmail.com");
+    }
   };
 
   const handleDownloadResume = () => {
