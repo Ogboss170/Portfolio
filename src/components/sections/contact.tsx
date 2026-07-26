@@ -50,44 +50,42 @@ export function Contact() {
   };
 
   const handleDownloadResume = () => {
-    // Dynamically generate and trigger PDF/text summary download of Oghosa's Resume
+    // Dynamically generate and trigger PDF/text download of Oghosa's exact CV
     const resumeText = `
-===================================================================
-                  OGHOSA (OGBOSS) - ENGINEERING CV
-===================================================================
-Title: Full-Stack Web, Mobile & Backend Engineer | Founder @ Workspace
-Location: Benin, Nigeria (Open for Remote Opportunities)
-Email: ogboss170@gmail.com
-WhatsApp: +234 9050045836
-GitHub: https://github.com/ogboss170
-LinkedIn: https://linkedin.com/in/osadolor-oghosa
+Ogboss170
+Software Engineer | Mobile & Full-Stack Developer
+Nigeria
+Portfolio: https://portfolio-eta-kohl-93.vercel.app
 
-SUMMARY
--------------------------------------------------------------------
-21-year-old Software Engineer and Founder of Workspace. Specializing in
-cross-platform mobile apps (React Native / Expo), enterprise web (Next.js),
-and scalable microservice backends (NestJS, Prisma ORM, PostgreSQL).
+Professional Summary
+Software Engineer specializing in React Native, Next.js, NestJS, PostgreSQL, Firebase and cloud integrations. Creator of Workspace, a marketplace platform with escrow, payments, chat, ride-hailing, nearby services and tutorials.
 
-FLAGSHIP PRODUCT: WORKSPACE ECOSYSTEM
--------------------------------------------------------------------
-An all-in-one marketplace platform unifying freelance gigs, nearby services,
-ride-hailing, interactive learning, automated financial escrow, and real-time chat.
+Technical Skills
+• React Native, Expo
+• Next.js, React, Tailwind CSS
+• NestJS, Node.js, Prisma
+• PostgreSQL, Firestore
+• Firebase, Google Cloud
+• Paystack, Stripe
+• Git, GitHub, Vercel
 
-CORE SKILLS
--------------------------------------------------------------------
-• Mobile: React Native, Expo, TypeScript, FlashList, Reanimated
-• Web: Next.js 15, React, Tailwind CSS, Framer Motion, TypeScript
-• Backend: NestJS, Prisma ORM, PostgreSQL, REST, WebSockets, Microservices
-• Cloud & Services: Firebase Auth, Firestore, Cloud SQL, FCM Push
-• Integrations: Paystack API, Stripe, Google Maps Platform, Smile ID KYC
-===================================================================
+Featured Project
+Workspace — Founder & Full-Stack Engineer
+• Built cross-platform app with React Native and Expo.
+• Developed NestJS backend with Prisma and PostgreSQL.
+• Integrated Firebase Auth, Firestore, Storage and FCM.
+• Implemented escrow wallet, Paystack, Stripe, Google Maps and Smile ID.
+
+Experience
+Independent Software Engineer (2024–Present)
+• Building web and mobile applications for personal and client projects.
     `.trim();
 
     const blob = new Blob([resumeText], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "Oghosa_Ogboss_Software_Engineer_Resume.txt";
+    link.download = "Ogboss170_Software_Engineer_Resume.txt";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
